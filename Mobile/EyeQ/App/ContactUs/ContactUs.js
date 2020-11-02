@@ -38,12 +38,12 @@ export default class ContactUs extends React.Component {
 				<View
 					style={styles.component1444View}>
 					<Image
-						source={require("./../../assets/images/group-15.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")}
 						style={styles.group15Image}/>
 					<View
 						style={styles.group9View}>
 						<Image
-							source={require("./../../assets/images/modellytics-logo300x.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\modellytics-logo300x-2.png")}
 							style={styles.modellyticsLogo300Image}/>
 						<View
 							style={{
@@ -57,7 +57,7 @@ export default class ContactUs extends React.Component {
 							flex: 1,
 						}}/>
 					<Image
-						source={require("./../../assets/images/ic-forum-24px.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\ic-forum-24px.png")}
 						style={styles.icForum24pxImage}/>
 				</View>
 				<View
@@ -67,7 +67,7 @@ export default class ContactUs extends React.Component {
 						marginTop: 1,
 					}}>
 					<Image
-						source={require("./../../assets/images/nopath---copy-19.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\nopath---copy-19.png")}
 						style={styles.nopathCopy19Image}/>
 					<View
 						style={styles.nopathCopy17View}/>
@@ -92,14 +92,14 @@ export default class ContactUs extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/my-arrow-3.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow-3.png")}
 								style={styles.myArrowImage}/>
 							<View
 								style={{
 									flex: 1,
 								}}/>
 							<Image
-								source={require("./../../assets/images/my-arrow-2.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow-2.png")}
 								style={styles.myArrowTwoImage}/>
 						</View>
 						<Text
@@ -126,7 +126,7 @@ export default class ContactUs extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/group-604.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-604.png")}
 								style={styles.group604Image}/>
 							<View
 								style={{
@@ -146,7 +146,7 @@ export default class ContactUs extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/group-606.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-606.png")}
 								style={styles.group606Image}/>
 							<Text
 								style={styles.textText}>+1 234 56789</Text>
@@ -162,7 +162,7 @@ export default class ContactUs extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/globe.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\globe.png")}
 								style={styles.globeImage}/>
 							<Text
 								style={styles.wwwMywebsiteComText}>www.mywebsite.com</Text>

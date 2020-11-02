@@ -31,12 +31,16 @@ export default class SignIn extends React.Component {
 	
 	}
 
+	loginclickSignUp = () => {
+		this.props.navigation.navigate('SignUpAOrM')
+	}
+
 	render() {
 	
 		return <View
 				style={styles.viewView}>
 				<Image
-					source={require("./../../assets/images/turned-on-silver-macbook-on-white-bed-916337.png")}
+					source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\turned-on-silver-macbook-on-white-bed-916337.png")}
 					style={styles.turnedOnSilverMacImage}/>
 				<View
 					pointerEvents="box-none"
@@ -49,7 +53,7 @@ export default class SignIn extends React.Component {
 						alignItems: "center",
 					}}>
 					<Image
-						source={require("./../../assets/images/logo-transparent-background.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\logo-transparent-background.png")}
 						style={styles.logoTransparentBacImage}/>
 					<Text
 						style={styles.userSignInText}>User Sign In</Text>
@@ -64,7 +68,7 @@ export default class SignIn extends React.Component {
 							flex: 1,
 						}}/>
 					<Text
-						style={styles.notAMemberSignText}>Not a member? </Text>
+						style={styles.notAMemberSignText} onPress = {this.loginclickSignUp}>Not a member? </Text>
 					<View
 						style={styles.group3View}>
 						<View

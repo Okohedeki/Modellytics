@@ -67,7 +67,7 @@ export default class Chat1 extends React.Component {
 									justifyContent: "center",
 								}}>
 								<Image
-									source={require("./../../assets/images/film-2.png")}
+									source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\film-2.png")}
 									style={styles.filmImage}/>
 							</View>
 							<View
@@ -87,7 +87,7 @@ export default class Chat1 extends React.Component {
 						<View
 							style={styles.rectangle58View}/>
 						<Image
-							source={require("./../../assets/images/film.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\film.png")}
 							style={styles.filmTwoImage}/>
 					</View>
 					<View
@@ -104,7 +104,7 @@ export default class Chat1 extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/group-23.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-23.png")}
 							style={styles.group23Image}/>
 						<Text
 							style={styles.alexSemeulText}>Alex Semeul</Text>
@@ -113,7 +113,7 @@ export default class Chat1 extends React.Component {
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/group-32.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-32.png")}
 							style={styles.group32Image}/>
 					</View>
 				</View>
@@ -174,7 +174,7 @@ export default class Chat1 extends React.Component {
 						alignItems: "flex-start",
 					}}>
 					<Image
-						source={require("./../../assets/images/group-32.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-32.png")}
 						style={styles.group599Image}/>
 					<Text
 						style={styles.catchYouBackIn5Text}>Catch you back in 5! Cheers!</Text>
@@ -198,7 +198,7 @@ export default class Chat1 extends React.Component {
 						flex: 1,
 					}}/>
 				<Image
-					source={require("./../../assets/images/group-32.png")}
+					source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-32.png")}
 					style={styles.group600Image}/>
 				<View
 					pointerEvents="box-none"
@@ -228,7 +228,7 @@ export default class Chat1 extends React.Component {
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/smiling.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\smiling.png")}
 							style={styles.smilingImage}/>
 					</View>
 				</View>

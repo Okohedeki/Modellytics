@@ -205,9 +205,9 @@ if __name__ == "__main__":
     net2.load_state_dict(torch.load(r"C:\Users\OWNER\Desktop\FaceShapeModel2.pht"))
     net2.eval()
 
-    Testing_images_1 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s5\**.png'
-    Testing_images_2 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s6\**.png'
-    Testing_images_3 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s7\**.png'
+    Testing_images_1 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s5\**@2x.png'
+    Testing_images_2 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s6\**@2x.png'
+    Testing_images_3 = r'C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\testing\s7\**@2x.png'
 
     img_testing_collection_1 = io.imread_collection(Testing_images_1)
     img_testing_collection_2 = io.imread_collection(Testing_images_2)

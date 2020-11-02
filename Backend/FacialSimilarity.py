@@ -46,8 +46,8 @@ def show_plot(iteration,loss):
     plt.show()
 
 class Config():
-    training_dir = r"C:\Users\OWNER\Desktop\git\Faces\Facial-Similarity-with-Siamese-Networks-in-Pytorch\data\faces\training"
-    testing_dir = r"C:\Users\OWNER\Desktop\Image Comparison\.."
+    training_dir = r"D:\Training"
+    testing_dir = r"D:\Testing\.."
     train_batch_size = 64
     train_number_epochs = 20
 
@@ -66,13 +66,28 @@ class SiameseNetworkDataset(Dataset):
             while True:
                 #keep looping till the same class image is found
                 img1_tuple = random.choice(self.imageFolderDataset.imgs) 
+
+                img0 = Image.open(img0_tuple[0])
+                img1 = Image.open(img1_tuple[0])
+
+                img0.close()
+                img1.close()
+
                 if img0_tuple[1]==img1_tuple[1]:
                     break
         else:
             while True:
                 #keep looping till a different class image is found
                 
-                img1_tuple = random.choice(self.imageFolderDataset.imgs) 
+                img1_tuple = random.choice(self.imageFolderDataset.imgs)
+
+                img0 = Image.open(img0_tuple[0])
+                img1 = Image.open(img1_tuple[0])
+
+                img0.close()
+                img1.close()
+                
+
                 if img0_tuple[1] !=img1_tuple[1]:
                     break
 
@@ -164,46 +179,52 @@ class ContrastiveLoss(torch.nn.Module):
 
         return loss_contrastive
 
+###Started Commenting Out
+train_dataloader = DataLoader(siamese_dataset,
+                    shuffle=True,
+                    num_workers=0,
+                    batch_size=Config.train_batch_size)
 
-# train_dataloader = DataLoader(siamese_dataset,
-#                         shuffle=True,
-#                         num_workers=0,
-#                         batch_size=Config.train_batch_size)
-
-    #net = SiameseNetwork() 
-    #criterion = ContrastiveLoss()
-    #optimizer = optim.Adam(net.parameters(),lr = 0.0005 )
+net = SiameseNetwork() 
+criterion = ContrastiveLoss()
+optimizer = optim.Adam(net.parameters(),lr = 0.0005 )
 
 
-    #counter = []
-    #loss_history = [] 
-    #iteration_number= 0
+counter = []
+loss_history = [] 
+iteration_number= 0
 
-    #print('Test Freeze 3')
+print('Test Freeze 3')
 
-    #for epoch in range(0,Config.train_number_epochs):
-    #     for i, data in enumerate(train_dataloader,0):
-    #         img0, img1 , label = data
-    #         img0, img1 , label = img0, img1 , label
-    #         optimizer.zero_grad()
-    #         output1,output2 = net(img0,img1)
-    #         loss_contrastive = criterion(output1,output2,label)
-    #         loss_contrastive.backward()
-    #         optimizer.step()
-    #         if i %10 == 0 :
-    #             print("Epoch number {}\n Current loss {}\n".format(epoch,loss_contrastive.item()))
-    #             iteration_number +=10
-    #             counter.append(iteration_number)
-    #             loss_history.append(loss_contrastive.item())
-    # show_plot(counter,loss_history)
+for epoch in range(0,Config.train_number_epochs):
+    for i, data in enumerate(train_dataloader,0):
+        img0, img1 , label = data
+        img0, img1 , label = img0, img1 , label
+        optimizer.zero_grad()
+        output1,output2 = net(img0,img1)
+        loss_contrastive = criterion(output1,output2,label)
+        loss_contrastive.backward()
+        optimizer.step()
+        if i %10 == 0 :
+            print("Epoch number {}\n Current loss {}\n".format(epoch,loss_contrastive.item()))
+            iteration_number +=10
+            counter.append(iteration_number)
+            loss_history.append(loss_contrastive.item())
+show_plot(counter,loss_history)
 
-    # print('Test Freeze 4')
+print('Test Freeze 4')
 
-    # torch.save(net.state_dict(),r"C:\Users\OWNER\Desktop\FaceSimilarity.pht" )
+torch.save(net.state_dict(),r"C:\Users\OWNER\Desktop\FaceSimilarity.pht" )
 
-net2 = SiameseNetwork()
-net2.load_state_dict(torch.load(r"C:\Users\OWNER\Desktop\FaceSimilarity.pht"))
-net2.eval()
+#Ending CommentedOut
+
+#Started Comment out - Testing Area
+
+#net2 = SiameseNetwork()
+#net2.load_state_dict(torch.load(r"C:\Users\OWNER\Desktop\FaceSimilarity.pht"))
+#net2.eval()
+
+
 
     # folder_dataset_test = dset.ImageFolder(root=Config.testing_dir)
     # siamese_dataset = SiameseNetworkDataset(imageFolderDataset=folder_dataset_test,

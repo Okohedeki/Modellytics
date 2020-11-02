@@ -56,7 +56,7 @@ export default class ModelSignUp1 extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/my-arrow.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow.png")}
 							style={styles.myArrowImage}/>
 						<View
 							style={{

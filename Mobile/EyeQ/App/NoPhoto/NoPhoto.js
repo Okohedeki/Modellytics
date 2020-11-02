@@ -56,12 +56,12 @@ export default class NoPhoto extends React.Component {
 						<View
 							style={styles.component1417View}>
 							<Image
-								source={require("./../../assets/images/group-15.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")}
 								style={styles.group15Image}/>
 							<View
 								style={styles.group9View}>
 								<Image
-									source={require("./../../assets/images/modellytics-logo300x-2.png")}
+									source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\modellytics-logo300x-2.png")}
 									style={styles.modellyticsLogo300Image}/>
 								<View
 									style={{
@@ -130,14 +130,14 @@ export default class NoPhoto extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/my-arrow-2.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow-2.png")}
 								style={styles.myArrowTwoImage}/>
 							<View
 								style={{
 									flex: 1,
 								}}/>
 							<Image
-								source={require("./../../assets/images/my-arrow.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow.png")}
 								style={styles.myArrowThreeImage}/>
 						</View>
 						<View

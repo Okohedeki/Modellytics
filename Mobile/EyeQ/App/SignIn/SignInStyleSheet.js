@@ -28,10 +28,10 @@ const styles = StyleSheet.create({
 		alignSelf: "flex-start",
 		width: 280,
 		height: 304,
-		marginLeft: 18,
+		marginLeft: 50,
 	},
 	userSignInText: {
-		color: "rgb(76, 82, 100)",
+		color: "rgb(0, 15, 77)",
 		fontFamily: "Poppins-Regular",
 		fontSize: 20,
 		fontStyle: "normal",
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
 		height: 28,
 	},
 	usernameText: {
-		color: "rgb(76, 82, 100)",
+		color: "rgb(0, 15, 77)",
 		fontFamily: "Poppins-Regular",
 		fontSize: 12,
 		fontStyle: "normal",
@@ -161,7 +161,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "transparent",
 	},
 	passwordText: {
-		color: "rgb(76, 82, 100)",
+		color: "rgb(0, 15, 77)",
 		fontFamily: "Poppins-Regular",
 		fontSize: 12,
 		fontStyle: "normal",
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
 	},
 	signInText: {
 		backgroundColor: "transparent",
-		color: "white",
+		color: "rgb(0, 15, 77)",
 		fontFamily: "Poppins-Regular",
 		fontSize: 15,
 		fontStyle: "normal",

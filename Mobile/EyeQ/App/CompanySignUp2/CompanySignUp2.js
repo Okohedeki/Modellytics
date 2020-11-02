@@ -66,14 +66,14 @@ export default class CompanySignUp2 extends React.Component {
 								alignItems: "flex-start",
 							}}>
 							<Image
-								source={require("./../../assets/images/my-arrow.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow.png")}
 								style={styles.myArrowImage}/>
 							<View
 								style={{
 									flex: 1,
 								}}/>
 							<Image
-								source={require("./../../assets/images/modellytics-logo300x-2.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\modellytics-logo300x-2.png")}
 								style={styles.modellyticsLogo300Image}/>
 							<Text
 								style={styles.modellyticsText}>Modellytics</Text>
@@ -174,10 +174,10 @@ export default class CompanySignUp2 extends React.Component {
 				<View
 					style={styles.group8View}>
 					<Image
-						source={require("./../../assets/images/background.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\background.png")}
 						style={styles.backgroundImage}/>
 					<Image
-						source={require("./../../assets/images/objects.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\objects.png")}
 						style={styles.objectsImage}/>
 				</View>
 			</View>

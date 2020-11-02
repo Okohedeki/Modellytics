@@ -47,12 +47,12 @@ export default class PhotosChoose extends React.Component {
 					<View
 						style={styles.component1420View}>
 						<Image
-							source={require("./../../assets/images/group-15.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")}
 							style={styles.group15Image}/>
 						<View
 							style={styles.group9View}>
 							<Image
-								source={require("./../../assets/images/modellytics-logo300x.png")}
+								source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\modellytics-logo300x-2.png")}
 								style={styles.modellyticsLogo300Image}/>
 							<View
 								style={{
@@ -79,14 +79,14 @@ export default class PhotosChoose extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/rectangle-2040.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2040.png")}
 							style={styles.rectangle2040Image}/>
 						<View
 							style={{
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/rectangle-2042.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2042.png")}
 							style={styles.rectangle2042Image}/>
 					</View>
 					<View
@@ -99,14 +99,14 @@ export default class PhotosChoose extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/rectangle-2043.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2043.png")}
 							style={styles.rectangle2043Image}/>
 						<View
 							style={{
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/rectangle-2045.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2045.png")}
 							style={styles.rectangle2045Image}/>
 					</View>
 					<View
@@ -119,14 +119,14 @@ export default class PhotosChoose extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/rectangle-2049.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2049.png")}
 							style={styles.rectangle2049Image}/>
 						<View
 							style={{
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/rectangle-2051.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2051.png")}
 							style={styles.rectangle2051Image}/>
 					</View>
 					<View
@@ -139,14 +139,14 @@ export default class PhotosChoose extends React.Component {
 							alignItems: "flex-start",
 						}}>
 						<Image
-							source={require("./../../assets/images/rectangle-2046.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2046.png")}
 							style={styles.rectangle2046Image}/>
 						<View
 							style={{
 								flex: 1,
 							}}/>
 						<Image
-							source={require("./../../assets/images/rectangle-2048.png")}
+							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2048.png")}
 							style={styles.rectangle2048Image}/>
 					</View>
 					<View
@@ -177,14 +177,14 @@ export default class PhotosChoose extends React.Component {
 									alignItems: "flex-end",
 								}}>
 								<Image
-									source={require("./../../assets/images/rectangle-2052.png")}
+									source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2052.png")}
 									style={styles.rectangle2052Image}/>
 								<View
 									style={{
 										flex: 1,
 									}}/>
 								<Image
-									source={require("./../../assets/images/rectangle-2054.png")}
+									source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2054.png")}
 									style={styles.rectangle2054Image}/>
 							</View>
 							<View
@@ -212,23 +212,23 @@ export default class PhotosChoose extends React.Component {
 						alignItems: "center",
 					}}>
 					<Image
-						source={require("./../../assets/images/rectangle-2041.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2041.png")}
 						style={styles.rectangle2041Image}/>
 					<Image
-						source={require("./../../assets/images/rectangle-2044.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2044.png")}
 						style={styles.rectangle2044Image}/>
 					<Image
-						source={require("./../../assets/images/rectangle-2050.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2050.png")}
 						style={styles.rectangle2050Image}/>
 					<Image
-						source={require("./../../assets/images/rectangle-2047.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2047.png")}
 						style={styles.rectangle2047Image}/>
 					<View
 						style={{
 							flex: 1,
 						}}/>
 					<Image
-						source={require("./../../assets/images/rectangle-2053.png")}
+						source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\rectangle-2053.png")}
 						style={styles.rectangle2053Image}/>
 					<Text
 						style={styles.selectText}>Select</Text>

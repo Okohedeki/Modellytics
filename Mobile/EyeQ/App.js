@@ -7,19 +7,22 @@
 //
 
 import * as Font from "expo-font"
-import NoPhoto from "./App/NoPhoto/NoPhoto"
-import PhotosChoose from "./App/PhotosChoose/PhotosChoose"
+//import NoPhoto from "./App/NoPhoto/NoPhoto"
 import React from "react"
 import SignIn from "./App/SignIn/SignIn"
+import SignUpAOrM from "./App/SignUpAOrM/SignUpAOrM"
 import { AppLoading, DangerZone } from "expo"
 import { createAppContainer, createStackNavigator } from "react-navigation"
 
 const PushRouteOne = createStackNavigator({
-	PhotosChoose: {
-		screen: PhotosChoose,
+	SignIn: {
+		screen: SignIn
 	},
+	SignUpAOrM: {
+		screen: SignUpAOrM
+	}
 }, {
-	initialRouteName: "PhotosChoose",
+	initialRouteName: "SignIn",
 })
 
 const RootNavigator = createStackNavigator({
@@ -53,7 +56,7 @@ export default class App extends React.Component {
 	async initProjectFonts() {
 	
 		await Font.loadAsync({
-			"Poppins-Regular": require("./assets/fonts/37516.otf"),
+			"Poppins-Regular": require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\fonts\\37516.otf"),
 		})
 		this.setState({
 			fontsReady: true,
