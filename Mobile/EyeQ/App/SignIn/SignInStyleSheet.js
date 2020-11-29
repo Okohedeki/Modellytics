@@ -7,6 +7,7 @@
 //
 
 import { StyleSheet } from "react-native"
+import { block } from "react-native-reanimated"
 
 const styles = StyleSheet.create({
 	viewView: {
@@ -86,7 +87,7 @@ const styles = StyleSheet.create({
 		marginBottom: 90,
 	},
 	group3View: {
-		backgroundColor: "transparent",
+		backgroundColor: "white",
 		opacity: 0,
 		alignSelf: "stretch",
 		height: 199,
@@ -103,10 +104,24 @@ const styles = StyleSheet.create({
 		alignSelf: "center",
 		top: 47,
 	},
+	textRectangleView:{
+		justifyContent: 'center',
+		flexDirection: 'row',
+		backgroundColor: '#fff',
+		borderWidth:1,
+		width: '100%',
+		alignSelf: "center",
+		position:"relative",
+		shadowColor: "#000000",
+		shadowOpacity: 0.8,
+	  },
+	  inner:{
+	  borderWidth:1
+	  },
 	rectangle8View: {
 		backgroundColor: "white",
 		borderRadius: 20,
-		height: 199,
+		height: 400,
 	},
 	signUpAsText: {
 		color: "rgb(76, 82, 100)",
@@ -181,6 +196,30 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		alignSelf: "center",
 		top: 573,
+	},
+	modalView: {
+		margin: 20,
+		backgroundColor: "gray",
+		borderRadius: 20,
+		padding: 35,
+		alignItems: "center",
+		shadowColor: "#000",
+		shadowOffset: {
+		  width: 0,
+		  height: 2
+		},
+		shadowOpacity: 0.25,
+		shadowRadius: 3.84,
+		elevation: 5
+	  },
+	verticleLine: {
+		height: '10%',
+		width: 1,
+		backgroundColor: '#909090',
+		marginTop:'20%'
+	  },
+	ModalText: {
+		justifyContent: 'center', alignItems: 'center', position: 'relative', top: 1000, left: 0, right: 0, bottom: 0
 	},
 })
 

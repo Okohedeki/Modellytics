@@ -9,9 +9,17 @@
 import React from "react"
 import styles from "./ModelSignUp1StyleSheet"
 import { Image, Text, View } from "react-native"
+import { HeaderBackButton } from 'react-navigation';
+
 
 
 export default class ModelSignUp1 extends React.Component {
+
+	static navigationOptions = ({navigation}) => {
+		return{
+		  headerLeft:(<HeaderBackButton onPress={()=>{navigation.navigate('SignIn')}}/>)
+	   }
+	  }
 
 	static navigationOptions = ({ navigation }) => {
 	

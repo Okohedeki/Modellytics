@@ -10,6 +10,8 @@ import * as Font from "expo-font"
 //import NoPhoto from "./App/NoPhoto/NoPhoto"
 import React from "react"
 import SignIn from "./App/SignIn/SignIn"
+import CompanySignUp1 from "./App/CompanySignUp1/CompanySignUp1"
+import ModalSignUp1 from "./App/ModelSignUp1/ModelSignUp1"
 import SignUpAOrM from "./App/SignUpAOrM/SignUpAOrM"
 import { AppLoading, DangerZone } from "expo"
 import { createAppContainer, createStackNavigator } from "react-navigation"
@@ -18,9 +20,12 @@ const PushRouteOne = createStackNavigator({
 	SignIn: {
 		screen: SignIn
 	},
-	SignUpAOrM: {
-		screen: SignUpAOrM
-	}
+	CompanySignUp1: {
+		screen: CompanySignUp1
+	},
+	ModalSignUp1: {
+		screen: ModalSignUp1
+	},
 }, {
 	initialRouteName: "SignIn",
 })

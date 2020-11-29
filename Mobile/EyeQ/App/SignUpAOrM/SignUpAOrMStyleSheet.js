@@ -28,6 +28,7 @@ const styles = StyleSheet.create({
 		alignSelf: "flex-start",
 		width: 280,
 		height: 304,
+		marginLeft: 50,
 	},
 	userSignInText: {
 		backgroundColor: "transparent",

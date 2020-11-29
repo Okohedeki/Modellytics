@@ -8,7 +8,9 @@
 
 import React from "react"
 import styles from "./SignInStyleSheet"
-import { Image, Text, View } from "react-native"
+import { Image, Text, View, TextInput } from "react-native"
+import MyModal from './../Modal/Modal.js'
+import { Divider } from "react-native-elements"
 
 
 export default class SignIn extends React.Component {
@@ -25,17 +27,62 @@ export default class SignIn extends React.Component {
 
 	constructor(props) {
 		super(props)
+		this.state = {isModalVisible:false,
+					  }
 	}
 
+	
 	componentDidMount() {
 	
 	}
+
 
 	loginclickSignUp = () => {
 		this.props.navigation.navigate('SignUpAOrM')
 	}
 
+	AgencySignUp = () => {
+		this.setState({ isModalVisible: false }),
+		this.props.navigation.navigate('CompanySignUp1')
+	}
+
+	ModelSignUp = () => {
+		this.setState({ isModalVisible: false }),
+		this.props.navigation.navigate('ModalSignUp1')
+	}
+
+
+	renderSignUpView() {
+		if (this.state.isModalVisible) {
+			console.log('hi')
+
+			return (
+			<View> 
+				<MyModal
+				visible={this.state.isModalVisible}
+				dismiss={this.hideModal}
+			  >
+				  
+				<Text style = {styles.modelText}  onPress = {this.ModelSignUp}>Model </Text>
+				<View style={styles.verticleLine}></View>
+				<Text style = {styles.modelText} onPress = {this.AgencySignUp}> Agency </Text>
+
+			  </MyModal>
+			</View>
+
+					)
+		}
+	}
+
+	showModal = () => this.setState({ isModalVisible: true });
+	hideModal = () => this.setState({ isModalVisible: false });
+
+	//New Stuff
+
+
 	render() {
+		console.log(this.state.isModalVisible)
+
 	
 		return <View
 				style={styles.viewView}>
@@ -57,6 +104,7 @@ export default class SignIn extends React.Component {
 						style={styles.logoTransparentBacImage}/>
 					<Text
 						style={styles.userSignInText}>User Sign In</Text>
+						
 					<View
 						style={styles.rectangle1View}/>
 					<View
@@ -68,7 +116,8 @@ export default class SignIn extends React.Component {
 							flex: 1,
 						}}/>
 					<Text
-						style={styles.notAMemberSignText} onPress = {this.loginclickSignUp}>Not a member? </Text>
+						style={styles.notAMemberSignText} onPress = {this.showModal}>Not a member? </Text>
+						{this.renderSignUpView()}
 					<View
 						style={styles.group3View}>
 						<View
@@ -80,55 +129,7 @@ export default class SignIn extends React.Component {
 								top: 0,
 								height: 199,
 							}}>
-							<Text
-								style={styles.notAMemberSignTwoText}>Not a member? </Text>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 0,
-									bottom: 0,
-									justifyContent: "center",
-								}}>
-								<View
-									style={styles.rectangle8View}/>
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 0,
-									right: 0,
-									top: 27,
-									height: 140,
-								}}>
-								<Text
-									style={styles.signUpAsText}>Sign Up As</Text>
-								<View
-									style={styles.rectangle12View}/>
-							</View>
-							<View
-								pointerEvents="box-none"
-								style={{
-									position: "absolute",
-									left: 64,
-									right: 54,
-									top: 120,
-									height: 31,
-									flexDirection: "row",
-									alignItems: "flex-start",
-								}}>
-								<Text
-									style={styles.modelText}>Model</Text>
-								<View
-									style={{
-										flex: 1,
-									}}/>
-								<Text
-									style={styles.agencyText}>Agency</Text>
-							</View>
+						
 						</View>
 						<View
 							style={styles.rectangle9View}/>
