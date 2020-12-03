@@ -53,6 +53,8 @@ const styles = StyleSheet.create({
 		width: 304,
 		height: 44,
 		marginTop: 4,
+		textAlign:'center',
+		borderColor:'black'
 	},
 	rectangle2View: {
 		backgroundColor: "transparent",
@@ -66,6 +68,9 @@ const styles = StyleSheet.create({
 		width: 304,
 		height: 44,
 		marginTop: 8,
+		textAlign:'center',
+
+
 	},
 	rectangle5View: {
 		backgroundColor: "transparent",
@@ -75,6 +80,7 @@ const styles = StyleSheet.create({
 		width: 305,
 		height: 57,
 		marginTop: 20,
+		textAlign:'center'
 	},
 	notAMemberSignText: {
 		backgroundColor: "transparent",

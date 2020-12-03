@@ -12,7 +12,9 @@ import React from "react"
 import SignIn from "./App/SignIn/SignIn"
 import CompanySignUp1 from "./App/CompanySignUp1/CompanySignUp1"
 import ModalSignUp1 from "./App/ModelSignUp1/ModelSignUp1"
+import UserDashBoard from "./App/UserDashBoardReal/UserDashBoardReal"
 import SignUpAOrM from "./App/SignUpAOrM/SignUpAOrM"
+import AdminDashboard from './App/AdminDashboard/AdminDashboard'
 import { AppLoading, DangerZone } from "expo"
 import { createAppContainer, createStackNavigator } from "react-navigation"
 
@@ -26,6 +28,12 @@ const PushRouteOne = createStackNavigator({
 	ModalSignUp1: {
 		screen: ModalSignUp1
 	},
+	UserDashBoard:{
+		screen: UserDashBoard
+	},
+	AdminDashboard:{
+		screen: AdminDashboard
+	}
 }, {
 	initialRouteName: "SignIn",
 })

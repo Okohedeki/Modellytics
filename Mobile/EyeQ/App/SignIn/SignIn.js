@@ -8,10 +8,21 @@
 
 import React from "react"
 import styles from "./SignInStyleSheet"
-import { Image, Text, View, TextInput } from "react-native"
-import MyModal from './../Modal/Modal.js'
+import { Image, Text, View, TextInput, TouchableWithoutFeedback, Keyboard} from "react-native"
+import MyModal from '../Components/Modal.js'
 import { Divider } from "react-native-elements"
 
+
+const DismissKeyboardHOC = (Comp) => {
+  return ({ children, ...props }) => (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <Comp {...props}>
+        {children}
+      </Comp>
+    </TouchableWithoutFeedback>
+  );
+};
+const DismissKeyboardView = DismissKeyboardHOC(View)
 
 export default class SignIn extends React.Component {
 
@@ -36,7 +47,6 @@ export default class SignIn extends React.Component {
 	
 	}
 
-
 	loginclickSignUp = () => {
 		this.props.navigation.navigate('SignUpAOrM')
 	}
@@ -49,6 +59,10 @@ export default class SignIn extends React.Component {
 	ModelSignUp = () => {
 		this.setState({ isModalVisible: false }),
 		this.props.navigation.navigate('ModalSignUp1')
+	}
+
+	AdminDashboardNavigate = () => { 
+		this.props.navigation.navigate('AdminDashboard')
 	}
 
 
@@ -105,10 +119,14 @@ export default class SignIn extends React.Component {
 					<Text
 						style={styles.userSignInText}>User Sign In</Text>
 						
-					<View
-						style={styles.rectangle1View}/>
-					<View
-						style={styles.rectangle2View}/>
+					{/* Wrap This as a Component */}
+					<DismissKeyboardView>				
+						<TextInput style = {styles.rectangle1View} placeholder = 'Username' placeholderTextColor='black' autoCorrect = {false}  />
+					</DismissKeyboardView>						
+					
+					<DismissKeyboardView>				
+						<TextInput style = {styles.rectangle2View} placeholder = 'Password' placeholderTextColor='black' autoCorrect = {false} />
+					</DismissKeyboardView>						
 					<View
 						style={styles.rectangle5View}/>
 					<View
@@ -145,13 +163,11 @@ export default class SignIn extends React.Component {
 						height: 71,
 						alignItems: "flex-start",
 					}}>
-					<Text
-						style={styles.usernameText}>Username</Text>
-					<Text
-						style={styles.passwordText}>Password</Text>
+					{/* <Text
+						style={styles.usernameText}>Username</Text> */}
+
 				</View>
-				<Text
-					style={styles.signInText}>Sign In</Text>
+				<Text style={styles.signInText} onPress = {this.AdminDashboardNavigate}>Sign In</Text>
 			</View>
 	}
 }
