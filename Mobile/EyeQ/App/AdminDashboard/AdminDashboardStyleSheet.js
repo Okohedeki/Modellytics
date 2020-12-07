@@ -10,8 +10,8 @@ import { StyleSheet } from "react-native"
 
 const styles = StyleSheet.create({
 	viewView: {
-		backgroundColor: "white",
 		flex: 1,
+		borderWidth:1,
 	},
 	component141View: {
 		backgroundColor: "white",
@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		left: 0,
 		width: 189,
-		top: 0,
+		top: -100,
 		height: 204,
 		justifyContent: "center",
 		alignItems: "flex-start",
@@ -197,6 +197,7 @@ const styles = StyleSheet.create({
 		height: 69,
 		marginLeft: 30,
 		alignItems: "center",
+		
 	},
 	icAccountBox24pxImage: {
 		backgroundColor: "transparent",
@@ -219,7 +220,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		right: 0,
 		width: 189,
-		top: 0,
+		top: -100,
 		height: 204,
 		alignItems: "center",
 	},
@@ -246,7 +247,7 @@ const styles = StyleSheet.create({
 		position: "absolute",
 		alignSelf: "center",
 		width: 2,
-		top: 25,
+		top: -75,
 		height: 154,
 	},
 	rectangle2022View: {
@@ -262,6 +263,7 @@ const styles = StyleSheet.create({
 		resizeMode: "center",
 		width: 40,
 		height: 39,
+		marginTop: 110
 	},
 	settingsText: {
 		backgroundColor: "transparent",

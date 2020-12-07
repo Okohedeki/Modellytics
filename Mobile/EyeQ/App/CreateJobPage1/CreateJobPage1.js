@@ -9,6 +9,7 @@
 import React from "react"
 import styles from "./CreateJobPage1StyleSheet"
 import { Image, Text, View } from "react-native"
+import {Formik, Form, Field} from 'formik'
 
 
 export default class CreateJobPage1 extends React.Component {
@@ -90,9 +91,17 @@ export default class CreateJobPage1 extends React.Component {
 							source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\my-arrow.png")}
 							style={styles.myArrowThreeImage}/>
 					</View>
+
+					<Text
+					style={styles.projectInformationText}>Project information</Text>
+					
 					<Text
 						style={styles.step1Text}>Step 1</Text>
-					<View
+
+
+
+						<View styles 
+					{/* <View
 						pointerEvents="box-none"
 						style={{
 							alignSelf: "flex-start",
@@ -414,10 +423,8 @@ export default class CreateJobPage1 extends React.Component {
 							style={styles.rectangle5View}/>
 						<Text
 							style={styles.nextText}>Next</Text>
-					</View>
-				</View>
-				<Text
-					style={styles.projectInformationText}>Project information</Text>
+					</View> */}
+				</View> 
 			</View>
 	}
 }

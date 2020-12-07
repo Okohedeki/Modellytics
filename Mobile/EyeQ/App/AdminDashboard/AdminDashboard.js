@@ -10,7 +10,7 @@
 
 import React from "react";
 import styles from "./AdminDashboardStyleSheet";
-import { Image, Text, View, SafeAreaView } from "react-native";
+import { Image, Text, View, SafeAreaView, TouchableOpacity } from "react-native";
 import Carousel from "react-native-snap-carousel";
 
 export default class AdminDashboard extends React.Component {
@@ -24,58 +24,80 @@ export default class AdminDashboard extends React.Component {
   };
 
   constructor(props){
-	super(props);
+  super(props);
+
 	this.state = {
 	  activeIndex:0,
 	  carouselItems: [
 	  {
 		  title:"Create Job",
 		  text: "Create a Job",
-		  image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")
+      image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png"),
+      link: 'CreateJobs1'
 	  },
 	  {
 		  title:"Edit Job",
 		  text: "Edit a Job",
-		  image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")
+      image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png"),
+      link: 'EditJobs1'
 	  },
 	  {
 		  title:"View Job",
 		  text: "View Job Details",
-		  image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")
-
+      image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png"),
+      link: 'ViewJobs1'
 	  },
 	  {
 		  title:"Reports",
 		  text: "View Reports",
-		  image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")
+      image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png"),
+      link: ''
 	  },
 	  {
 		  title:"Messaages",
 		  text: "View Messages",
-		  image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png")
+      image:require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\group-15.png"),
+      link: ''
 	  },
 	]
   }
-}
+  }
 
 _renderItem({item,index}){
 	return (
-	  <View style={{
+    <TouchableOpacity onPress = {() => this.props.navigation.navigate(item.link)}
+     style={{
 		  backgroundColor: "#5574F7",
-		  borderRadius: 5,
+      borderRadius: 5,
+      borderColor:'black',
+      borderWidth:2,
 		  height: 150,
 		  padding: 50,
 		  marginLeft: 25,
-		  marginRight: 25, }}>
-		<Text style={{fontSize: 25., color:'white'}}>{item.title}</Text>
-		<Text style = {{color:'white'}}>{item.text}</Text>
-		<Image source={item.image} />
-	  </View>
+      marginRight: 25, }}
+    >
+		<Text style={{fontSize: 25, color:'white', paddingLeft:25}}>{item.title}</Text>
+		<Text style = {{color:'white', paddingLeft:25}}>{item.text}</Text>
+		<Image style = {{top:-39, left:-20}} source={item.image} />
+	  </TouchableOpacity>
 
 	)
 }
 
-  componentDidMount() {}
+  componentDidMount() {
+
+  }
+
+
+
+  CreateJobNavigation = () => { 
+  	this.props.navigation.navigate('CreateJobs1')
+    console.log('asd');
+    }
+
+
+
+
 
   render() {
     return (
@@ -196,8 +218,8 @@ _renderItem({item,index}){
         <SafeAreaView
           style={{ flex: 1, paddingTop: 50 }}
         >
-          <View
-            style={{ flex: 1, flexDirection: "row", justifyContent: "center", paddingTop:75}}
+          <View 
+            style={{ flex: 1, flexDirection: "row", justifyContent: "center", paddingTop:25}}
           >
             <Carousel
               layout={"default"}
@@ -205,20 +227,21 @@ _renderItem({item,index}){
               data={this.state.carouselItems}
               sliderWidth={300}
               itemWidth={300}
-              renderItem={this._renderItem}
+              renderItem={this._renderItem.bind(this)}
               onSnapToItem={(index) => this.setState({ activeIndex: index })}
             />
           </View>
         </SafeAreaView>
-{/* 
+
         <View
           pointerEvents="box-none"
           style={{
-            height: 204,
-            marginTop: 60,
+            height: -10,
+            marginTop: 80,
+
           }}
         >
-          <View style={styles.group17View}>
+          <TouchableOpacity style={styles.group17View}>
             <View style={styles.group16View}>
               <Image
                 source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\ic-account-box-24px.png")}
@@ -229,27 +252,30 @@ _renderItem({item,index}){
                   flex: 1,
                 }}
               />
-              <Text style={styles.viewApplicantsText}>View Applicants</Text>
+              <Text style={styles.viewApplicantsText}>Job Board</Text>
             </View>
-          </View>
-          <View style={styles.group18View}>
+          </TouchableOpacity>
+          <TouchableOpacity onPress = {() => this.props.navigation.navigate('CompanyProfile1')} style={styles.group18View}>
             <Image
               source={require("C:\\Users\\Edeki Okoh1\\Desktop\\Modellytics\\Mobile\\EyeQ\\assets\\images\\ic-chrome-reader-mode-24px.png")}
               style={styles.icChromeReaderModImage}
             />
             <Text style={styles.companyProfileText}>Company Profile</Text>
-          </View>
+          </TouchableOpacity>
           <View style={styles.rectangle2023View} />
         </View>
-        <View
+
+        {/* This View is Overriding above view */}
+          <TouchableOpacity
           pointerEvents="box-none"
           style={{
             flex: 1,
-            marginTop: 7,
-            marginBottom: 82,
+            marginTop: 0,
           }}
+          onPress = {() => this.props.navigation.navigate('Settings')}
         >
-          <View style={styles.rectangle2022View} />
+       
+          <View onPress = {() => this.props.navigation.navigate('Settings')} style={styles.rectangle2022View} />
           <View
             pointerEvents="box-none"
             style={{
@@ -271,11 +297,12 @@ _renderItem({item,index}){
               }}
             />
             <Text style={styles.settingsText}>Settings</Text>
-          </View>
-        </View>
+          </View> 
+        </TouchableOpacity>
+
         <View style={styles.homeIndicatorView}>
           <View style={styles.homeIndicatorTwoView} />
-        </View> */}
+        </View>  
       </View>
     );
   }

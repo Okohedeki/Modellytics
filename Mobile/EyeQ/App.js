@@ -13,6 +13,12 @@ import SignIn from "./App/SignIn/SignIn"
 import CompanySignUp1 from "./App/CompanySignUp1/CompanySignUp1"
 import ModalSignUp1 from "./App/ModelSignUp1/ModelSignUp1"
 import UserDashBoard from "./App/UserDashBoardReal/UserDashBoardReal"
+import CreateJobs1 from "./App/CreateJobPage1/CreateJobPage1"
+import EditJobsPage11 from "./App/EditJobsPage11/EditJobsPage11"
+import ViewJobsPage1 from './App/ViewJobsPage1/ViewJobsPage1'
+import Settings from './App/Settings/Settings'
+//import JobBoard from './App/JobBoard/JobBoard'
+import CompanyProfile from './App/CompanyProfilePage1/CompanyProfilePage1'
 import SignUpAOrM from "./App/SignUpAOrM/SignUpAOrM"
 import AdminDashboard from './App/AdminDashboard/AdminDashboard'
 import { AppLoading, DangerZone } from "expo"
@@ -33,6 +39,21 @@ const PushRouteOne = createStackNavigator({
 	},
 	AdminDashboard:{
 		screen: AdminDashboard
+	},
+	CreateJobs1: {
+		screen:CreateJobs1
+	},
+	EditJobsPage11: {
+		screen:EditJobsPage11
+	},
+	ViewJobsPage1: {
+		screen:ViewJobsPage1
+	},
+	CompanyProfile: {
+		screen: CompanyProfile
+	},
+	Settings: {
+		screen: Settings
 	}
 }, {
 	initialRouteName: "SignIn",

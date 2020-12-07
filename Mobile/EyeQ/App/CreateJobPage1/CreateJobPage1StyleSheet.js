@@ -401,7 +401,7 @@ const styles = StyleSheet.create({
 		textAlign: "center",
 		position: "absolute",
 		alignSelf: "center",
-		top: 139,
+		top: 150,
 	},
 })
 
